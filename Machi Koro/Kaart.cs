@@ -27,10 +27,12 @@ namespace Machi_Koro
             {
                 case "Bakkerij":
                     // Als het de beurt van de speler is met deze kaart krijgen ze 1 munt
-
+                    player.geld = player.geld + 1;
+                    break;
                 case "Supermarkt":
                     // Als het de beurt is van de speler met deze kaart krijgen ze 3 munten
-
+                    player.geld = player.geld + 3;
+                    break;
                 case "Kaasfabriek":
                     // Als het de beurt is van de speler met deze kaart, krijg 3 munten voor elke veehouderij in bezit
 

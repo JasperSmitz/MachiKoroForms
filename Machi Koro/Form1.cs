@@ -22,6 +22,8 @@ namespace Machi_Koro
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            int currentPlayer = 0;
+
             tafel.GenereerKaarten();
             tafel.SpelerToevoegen(4);
             p1_Stats.Text = tafel.players[0].naam + " | Geld:" + tafel.players[0].geld;
@@ -48,15 +50,18 @@ namespace Machi_Koro
             {
                 p4_Hand.Text += kaart.naam + Environment.NewLine;
             }
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            WinkelScherm winkelScherm = new WinkelScherm();
+            winkelScherm.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+
             textBox2.Clear();
             int rolWaarde;
             rolWaarde = tafel.rollDice();
@@ -68,12 +73,18 @@ namespace Machi_Koro
         {
             int eersteRolWaarde;
             int tweedeRolWaarde;
+
             eersteRolWaarde = tafel.rollDice();
             textBox1.Text = "Rol 1: " + eersteRolWaarde;
             
             
             tweedeRolWaarde = tafel.rollDice();
             textBox2.Text = "Rol 2: " + tweedeRolWaarde;
+        }
+
+        private void Quit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

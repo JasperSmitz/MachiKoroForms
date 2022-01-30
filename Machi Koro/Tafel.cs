@@ -8,6 +8,7 @@ namespace Machi_Koro
     {
         public List<Player> players = new List<Player>();
         public List<Kaart> beschikbareKaarten = new List<Kaart>();
+        Random random = new Random();
 
         public Tafel()
         {
@@ -54,7 +55,6 @@ namespace Machi_Koro
 
         public int rollDice()
         {
-            Random random = new Random();
             int dice = random.Next(1, 6);
             return dice;
         }

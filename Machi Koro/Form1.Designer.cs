@@ -42,6 +42,7 @@ namespace Machi_Koro
             this.p2_Hand = new System.Windows.Forms.TextBox();
             this.p3_Hand = new System.Windows.Forms.TextBox();
             this.p4_Hand = new System.Windows.Forms.TextBox();
+            this.Quit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -169,11 +170,23 @@ namespace Machi_Koro
             this.p4_Hand.Size = new System.Drawing.Size(100, 292);
             this.p4_Hand.TabIndex = 12;
             // 
+            // Quit
+            // 
+            this.Quit.Location = new System.Drawing.Point(744, 13);
+            this.Quit.Name = "Quit";
+            this.Quit.Size = new System.Drawing.Size(44, 23);
+            this.Quit.TabIndex = 13;
+            this.Quit.Text = "Quit";
+            this.Quit.UseVisualStyleBackColor = true;
+            this.Quit.Click += new System.EventHandler(this.Quit_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ControlBox = false;
+            this.Controls.Add(this.Quit);
             this.Controls.Add(this.p4_Hand);
             this.Controls.Add(this.p3_Hand);
             this.Controls.Add(this.p2_Hand);
@@ -210,6 +223,7 @@ namespace Machi_Koro
         private System.Windows.Forms.TextBox p2_Hand;
         private System.Windows.Forms.TextBox p3_Hand;
         private System.Windows.Forms.TextBox p4_Hand;
+        private System.Windows.Forms.Button Quit;
     }
 }
 
